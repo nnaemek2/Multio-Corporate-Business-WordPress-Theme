@@ -1,0 +1,21 @@
+<wpml-config>
+    <admin-texts>
+        <key name="cms_theme_options">
+            <key name="topbar_email_label" />
+            <key name="topbar_email" />
+            <key name="topbar_phone_label" />
+            <key name="topbar_phone" />
+            <key name="topbar_address_label" />
+            <key name="topbar_address" />
+            <key name="topbar_time" />
+            <key name="footer_copyright" />
+            <key name="description_404_page" />
+            <key name="btn_text_404_page" />
+            <key name="h_btn_text" />
+            <key name="h_btn_link_type" />
+            <key name="h_btn_link" />
+            <key name="h_btn_link_custom" />
+            <key name="h_btn_target" />
+        </key>
+    </admin-texts>
+</wpml-config>
