@@ -1,0 +1,64 @@
+.service-item-inner {
+        text-align: center;
+        padding: 48px 30px;
+        position: relative;
+        .service-item-front {
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            @include transition(all 0.35s ease);
+        }
+        .service-item-back {
+            @include border-radius(6px);
+            padding: 33px 20px 29px 20px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: calc(100% + 1px);
+            width: -webkit-calc(100% + 1px);
+            width: -ms-calc(100% + 1px);
+            width: -o-calc(100% + 1px);
+            background-color: $primary_color;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            @include box-shadow(0 7px 70px rgba(#000, 0.34) inset);
+            z-index: 99;
+            @include transform(translate(0, -50%) rotateY(90deg));
+            -o-transform-origin: 50% 0%;
+            -ms-transform-origin: 50% 0%;
+            -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+            opacity: 0;
+            box-sizing: border-box;
+            @include transition(all 0.35s ease);
+            .service-title, .service-sub-title {
+                color: #fff;
+            }
+        }
+        &:after {
+            content: '';
+            height: 60px;
+            width: 1px;
+            background-color: #acbec5;
+            position: absolute;
+            top: 50%;
+            right: -1px;
+            @include transform(translate(0, -50%));
+            opacity: 0;
+            @include transition(all 300ms linear 0ms);
+        }
+        &:hover {
+            .service-item-front {
+                @include transform(rotateY(-180deg));
+                opacity: 0;
+            }
+            .service-item-back {
+                opacity: 1;
+                -webkit-transition-delay: 0.14s;
+                -moz-transition-delay: 0.14s;
+                transition-delay: 0.14s;
+                @include transform(translate(0, -50%) rotateY(0deg));
+            }
+        }
+    }
